@@ -7,9 +7,20 @@
   <title>{% block title %}StuddBudd{%endblock%}</title>
 </head>
 <body>
-  {% include 'footer.html' %}
+  {% include 'navbar.html' %}
+  {% if messages %}
+  <ul class="messaages">
+     {% for message in messages %}
+     <li>{{message}}</li>
+     {%endfor%}
+
+  </ul>
+
+  {% endif %}
   {% block content %}
-  {% endblock %}
+  
+
+  {% endblock content %}
   
 </body>
 </html>
